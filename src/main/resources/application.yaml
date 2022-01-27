@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/myfriend
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 6021
+    username: root
+  banner:
+    location: banner.txt
+    # 配置mybatis规则、使用MyBatisPlus则此项配置无效
+    #mybatis:
+    ##  config-location: classpath:mybatis/mybatis-config.xml
+    #  mapper-locations: classpath:mybatis/mapper/*.xml
+    #  configuration:  # 指定mybatis全局配置文件中的相关配置项
+    #    map-underscore-to-camel-case: true
+  #    image:
+  #      location: banner.png
+#  redis:
+#    host: 192.168.28.130
+#    port: 6379
+#    database: 0
+#    timeout: 1800000
+#    password: Lw1279379715
+#  servlet:
+#    multipart:
+#      max-file-size: 10MB
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 8081
